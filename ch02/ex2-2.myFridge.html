@@ -1,0 +1,32 @@
+<!-- 리스팅 2.2 뼈대가 되는 템플릿의 구조 -->
+
+<head>
+  <title>myFridge</title>
+</head>
+
+<body>
+  {{> container}}
+</body>
+
+<template name="container">
+  <div class="container">
+    <div class="left">
+      {{> fridge}}
+    </div>
+    <div class="right">
+      {{> productList}}
+    </div>
+  </div>
+</template>
+
+<template name="fridge">
+  <div id="fridge">
+    ...
+  </div>
+</template>
+
+<template name="productList">
+  <div id="supermarket" class="box">
+    ...
+  </div>
+</template>

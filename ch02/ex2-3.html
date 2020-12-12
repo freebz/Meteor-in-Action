@@ -1,0 +1,11 @@
+<!-- 리스팅 2.3 each 헬퍼를 사용하여 productsList 템플릿에서 products를 순회한다. -->
+
+<template name="productList">
+    <div id="supermarket" class="box">
+	<ul id="products">
+	{{#each products}}
+	    <li>{{> productListItem}}</li>
+	{{/each}}
+	</ul>
+    </div>
+</template>

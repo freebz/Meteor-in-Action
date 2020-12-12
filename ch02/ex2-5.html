@@ -1,0 +1,12 @@
+<!-- 리스팅 2.5 fridge 템플릿 안에 있는 각 품목 반복하기 -->
+
+<template name="fridge">
+    <div id="fridge">
+	<img class="image-responsive" src="/empty-fridge.jpg" />
+	<ul>
+	    {{#each products}}
+	        <li>{{> productListItem}}</li>
+	    {{/each}}
+	</ul>
+    </div>
+</template>

@@ -1,0 +1,17 @@
+/* 리스팅 2.1 전반적인 레이아웃 스타일 */
+
+.container {
+    width: 95%;
+    position: relative;
+}
+
+.left {
+    float: left;
+    width: 60%;
+    margin-right: 2%;
+}
+
+.right {
+    float: right;
+    width: 37%;
+}
