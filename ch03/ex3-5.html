@@ -1,0 +1,22 @@
+<!-- 리스팅 3.5 프로필 템플릿 분리하기 -->
+
+<template name="partialsSplit" >
+    <div class="left">
+	{{> partialsUserProfile}}
+    </div>
+    <div class="right">
+	{{> partialsNewsStream}}
+    </div>
+</template>
+
+<template name="partialsUserProfile">
+    <img src="{{image}}">
+    <p>{{name}}</p>
+</template>
+
+<template name="partialsNewsStream">
+    <ul class="news-stream">
+	<li class="news-item">Yesterday I went fishing, boy this was a blast</li>
+	<li class="news-item">Look, cookies! <img src="cookies.jpg"></li>
+    </ul>
+</template>

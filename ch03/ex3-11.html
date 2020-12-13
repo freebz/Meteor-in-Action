@@ -1,0 +1,24 @@
+<!-- 리스팅 3.11 #with 태그의 사용 -->
+
+// meteorTemplate.html
+<template name="withBlock">
+  <ul>
+    {{#with profileJim}}
+      <p>{{name}}</p>
+      {{#each skills}}
+        <li>{{this}}</li>
+      {{/each}}
+    {{/with}}
+  </ul>
+</template>
+
+// meteorTemplate.js
+Template.withBlock.helpers({
+  profileJim: function () {
+    var jim = {
+      name: 'Jim "Sailor Ripley" Johnson',
+      skills: ['Meteor', 'Sailing', 'Cooking'],
+    };
+    return jim;
+  }
+});

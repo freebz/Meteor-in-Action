@@ -1,0 +1,28 @@
+<!-- 리스팅 3.12 서로 다른 로컬 헬퍼를 사용한 프로필 템플릿 -->
+
+// meteorTemplates.html
+<template name="localHelpers">
+  <p>{{name}}</p>
+  {{#if image}}
+    <img src="{{images.thumb}}" alt="">
+  {{/if}}
+  {{#if skills}}
+    <p>Primary Skill: {{skills.[0]}}</p>
+    {{#if hasMoreSkills skills}}
+      <a href="/skills">see more...</a>
+    {{/if}}
+  {{/if}}
+</template>
+
+// meteorTemplate.js
+Template.localHelpers.helpers({
+  name: 'Jim',
+  image: {
+    large: '/jim-profile-large.jpg',
+    thumb: '/jim-profile-thumb.jpg'
+  },
+  skills: ['Meteor', 'Sailing', 'Cooking'],
+  hasMoreSkills: function (skills) {
+    return skills && skills.length > 1;
+  }
+});

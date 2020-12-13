@@ -1,0 +1,28 @@
+<!-- 리스팅 3.18 서브 템플릿 안에서 이벤트를 리스닝하기 -->
+
+// meteorEvents.html
+<body>
+  {{> layouot}}
+</body>
+
+<template name="layout">
+  <button>Turn red</button>
+  {{> green}}
+</template>
+
+<template name="green">
+  <button id="green">Turn green</button>
+</template>
+
+// meteorEvents.js
+Template.layout.events({
+  'click button': function(event, template) {
+    $('body').css('background-color', 'red');
+  }
+});
+
+Template.green.events({
+  'click button': function(event, template) {
+    $('body').css('background-color', 'green');
+  }
+});

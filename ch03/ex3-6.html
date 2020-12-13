@@ -1,0 +1,21 @@
+<!-- 리스팅 3.6 헬퍼를 사용하여 동적으로 서브 템플릿에 내용 추가하기 -->
+
+// meteorTemplates.html
+<template name="dynamicPartials">
+    <div class="left">
+      {{> Template.dynamic template=templateNameLeft }}
+    </div>
+    <div class="right">
+      {{> Template.dynamic template=templateNameRight }}
+    </div>
+</template>
+
+// meteorTemplates.js
+Template.dynamicPartials.helpers({
+    templateNameLeft: function () {
+        return "partialsUserProfile";
+    },
+    templateNameRight: function () {
+        return "partialsNewsStream";
+    }
+});

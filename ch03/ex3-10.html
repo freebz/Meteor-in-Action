@@ -1,0 +1,17 @@
+<!-- 리스팅 3.10 #each 태그 사용하기 -->
+
+// HTML file
+<template name="eachBlock">
+  <ul>
+    {{#each skills}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+// JavaScript file
+Template.eachBlock.helpers({
+  skills: function(){
+    return ['Meteor', 'Sailing', 'Cooking'];
+  }
+});

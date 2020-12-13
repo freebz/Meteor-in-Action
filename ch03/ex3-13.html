@@ -1,0 +1,28 @@
+<!-- 리스팅 3.13 배열 길이를 결정하는 글로벌 헬퍼 사용 -->
+
+// meteorTemplates.html
+<template name="globalHelpers">
+  {{#if gt skills 1}}
+  <a href="/images">see more ...</a>
+  {{/if}}
+  {{#if gt images 4}}
+  <a href="/images">see more ...</a>
+  {{/if}}
+</template>
+
+// meteorTemplates.js
+Template.globalHelpers.helpers({
+  skills: function() {
+    return ['Meteor', 'Sailing', 'Cooking'];
+  },
+  images: function() {
+    return ['/jim-profile-large.jpg', '/jim-profile-thumb.jpg'];
+  }
+});
+
+// globalHelpers.js
+if (Meteor.isClient) {
+    Template.registerHelper('gt', function(array, n) {
+        return array && array.length > n;
+    });
+}

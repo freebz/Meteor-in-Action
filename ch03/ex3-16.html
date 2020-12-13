@@ -1,0 +1,18 @@
+<!-- 리스팅 3.16 템플릿 로직을 자바스크립트 헬퍼로 옮기기 -->
+
+// meteorTemplates.html
+<template name="logicByHelper">
+  {{genderLabel gender}}
+</template>
+
+// meteorTemplates.js
+Template.logicByHelper.helpers({
+  gender: 'm',
+  genderLabel: function(gender) {
+    if (gender === 'm') {
+      return 'Mr. ';
+    } else {
+      return 'Mrs. ';
+    }
+  }
+});

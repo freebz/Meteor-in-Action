@@ -1,0 +1,16 @@
+<!-- 리스팅 3.14 Template.contentBlock을 가지고 있는 커스텀 블록 헬퍼 -->
+
+<template name="codeOfTheMonth">
+  {{# sidebarWidget title="Code of teh MOnth"}}
+    Manuel
+  {{/sidebarWidget}}
+</template>
+
+<template name="sidebarWidget">
+  <div class="sidebar-widget box">
+    <div class="title">{{ this.title }}</div>
+    <div class="content">
+      {{> Template.contentBlock}}
+    </div>
+  </div>
+</template>

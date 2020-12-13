@@ -1,0 +1,31 @@
+<!-- 리스팅 3.15 Template.elseBlock을 사용 -->
+
+// meteorTemplates.html
+<template name="templateElseBlock">
+  {{#isFemale gender}}
+    Mrs.
+  {{else}}
+    Mr.
+  {{/isFemale}}
+</template>
+
+<template name="isFemale">
+  {{#if eq this 'w'}}
+    {{> Template.contentBlock}}
+  {{else}}
+    {{> template.elseBlock}}
+  {{/if}}
+</template>
+
+// meteorTemplates.js
+Template.templateElseBlock.helpers({
+  gender: function() {
+    return 'm';
+  }
+});
+
+template.isFemale.helpers({
+  eq: function(a, b) {
+    return a === b;
+  }
+});
