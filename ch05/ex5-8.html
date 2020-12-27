@@ -1,0 +1,10 @@
+<!-- 리스팅 5.8 plantFieldset 템플릿에 인덱스 정보 추가하기 -->
+
+<template name="plantFieldset">
+  <fieldset>
+    Color <input class="color" type="text" value="{{color}}" data-index="{{index}}">
+    Instructions <input type="text" class="instructions"
+			value="{{instructions}}" data-index="{{index}}">
+    <button class="removePlant" data-index="{{index}}">Remove Plant</button>
+  </fieldset>
+</template>

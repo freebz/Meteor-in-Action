@@ -1,0 +1,7 @@
+<!-- 리스팅 5.15 알림 메시지를 표시한 템플릿 -->
+
+<template name="notificationArea">
+  {{#if notification}}
+    <p class="{{notification.type}}">{{notification.text}}</p>
+  {{/if}}
+</template>

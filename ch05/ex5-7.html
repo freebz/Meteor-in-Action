@@ -1,0 +1,12 @@
+<!-- 리스팅 5.7 템플릿 헬퍼에서 plants에 대한 인덱스 추가하기 -->
+
+<template name="houseForm">
+  ...
+  <form id="houseForm">
+    ...
+    {{#each withIndex plants}}
+      {{> plantFieldset}}
+    {{/each}}
+    ...
+  </form>
+</template>
