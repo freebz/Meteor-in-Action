@@ -1,0 +1,25 @@
+// 리스팅 6.2 users 컬렉션에 있는 하나의 user 도큐먼트
+
+{
+  "_id" : "xcwYNyvMhP8rq6EPp",
+  "createdAt" : ISODate("2015-05-22T12:47:33.821Z"),
+  "emails" : [
+    {
+      "address" : "stephan@meteorinaction.com",
+      "verified" : false
+    }
+  ],
+  "services" : {
+    "password" : {
+      "bcrypt" : "$2a$10$OsFJKxSApp68T9elfjKvtXBdBP...SnY"
+    },
+    "resume" : {
+      "loginTokens" : [
+	{
+	  "when" : ISODate("2014-12-26T09:24:51.382Z"),
+	  "hashedToken" : "sAMzRZMnqWrmXbmOCm7cpKzG5JR5qf...8f9bUto="
+	}
+      ]
+    }
+  }
+}
