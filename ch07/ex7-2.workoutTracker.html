@@ -1,0 +1,29 @@
+<!-- 리스팅 7.2 로딩 인디케이터와 함께 템플릿-레벨 구독을 사용하기 -->
+
+// workoutTracker.html
+<template name="workoutList">
+  {{#if Template.subscriptionsReady}}
+    <ul>
+      {{#each workouts}}
+        <li>{{workoutAt}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    loading workouts...
+  {{/if}}
+</template>
+
+// workoutTrackter.js
+Template.workoutList.onCreated(function () {
+  this.subscribe('workouts');
+});
+
+Template.workoutList.helpers({
+  workouts: function () {
+    return WorkoutsCollection.find({}, {
+      sort: {
+        workoutAt: -1
+      }
+    });
+  }
+});

@@ -1,0 +1,16 @@
+리스팅 7.13 메서드에 검증되지 않은 값에 대한 콘솔 메시지
+
+Exception while invoking method 'CreateWorkout' Error: Did not check() all
+       arguments during call to 'CreateWorkout'
+    at _.extend.throwUnlessAllArgumentsHaveBeenChecked (packages/check/
+       match.js:352)
+    at Object.Match._failIfArgumentsAreNotAllChecked (packages/check/
+       match.js:108)
+    at maybeAuditArgumentChecks (packages/ddp/livedata_server.js:1596)
+    at packages/ddp/livedata_server.js:648
+    at _.extend.withValue (packages/meteor/dynamics_nodejs.js:56)
+    at packages/ddp/livedata_server.js:647
+    at _.extend.withValue (packages/meteor/dynamics_nodejs.js:56)
+    at _.extend.protocol_handlers.method (packages/ddp/
+       livedata_server.js:646)
+    at packages/ddp/livedata_server.js:546
