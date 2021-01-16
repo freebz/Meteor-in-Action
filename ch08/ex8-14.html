@@ -1,0 +1,17 @@
+<!-- 리스팅 8.14 액티브 링크를 강조하는 글로벌 -->
+
+// helpers.js
+Template.registerHelper("isActiveRoute", function(routeName) {
+  if (Router.current().route.getName() === routeName) {
+    return 'active';
+  }
+});
+
+// index.html
+<nav>
+  <ul>
+    <li class="{{isActiveRoute 'about'}}">
+      {{#linkTo route="about"}}About{{/linkTo}}
+    </li>
+  </ul>
+</nav>

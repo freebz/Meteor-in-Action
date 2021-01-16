@@ -1,0 +1,15 @@
+<!-- 리스팅 8.3 레이아웃에 특별한 마크업들을 하나의 공통적인 레이아웃 템플릿으로 옮기기 -->
+
+// masterLayout.html
+<template name="masterLayout">
+  {{> header}}
+
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>
+
+// home.html
+<template name="home">
+  <h1>Home</h1>
+</template>

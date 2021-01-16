@@ -1,0 +1,18 @@
+<head>
+  <title>My Little Community</title>
+</head>
+
+<template name="header">
+  <nav>
+    <ul>
+      <li>
+	{{#linkTo route='home' class='navbar-brand'}}
+	  My Little Community
+	{{/linkTo}}
+      </li>
+      <li class="{{isActiveRoute 'about'}}">
+	{{#linkTo route="about"}}About{{/linkTo}}
+      </li>
+    </ul>
+  </nav>
+</template>

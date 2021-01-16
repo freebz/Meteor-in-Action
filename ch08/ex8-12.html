@@ -1,0 +1,27 @@
+// 리스팅 8.12 이름 붙여진 라우트의 사용
+
+// routes.js
+Router.route('/', { name: 'home'});
+Router.route('/about', 'about', {name: 'about'});
+Router.route('/profiles/:_id', {name: 'profile.details'});
+
+// index.html
+<template name="header">
+  <nav>
+    ...
+    <ul>
+      <li><a href="{{pathFor 'home'}}">My Little Community</a></li>
+      <li><a href="{{pathFor 'about'}}">About</a></li>
+    </ul>
+  </nav>
+</template>
+
+// profilePreview.html
+<template name="profilePreview">
+  <img src="{{profileImg}}">
+  <div>
+    <h3>{{name}}</h3>
+    <p>{{profileText}}</p>
+    <a href="{{pathFor 'profile.details'}}">more...</a>
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<!-- 리스팅 8.13 앵커 요소를 렌더링하기 위해 linkTo 블록 헬퍼를 사용 -->
+
+{{#linkTo route='about'}}About{{/linkTo}}
+
+// 다음과 같이 렌더링된다.
+<a href="/about">About</a>
+
+{{#linkTo route='home' class='navbar-brand'}}
+  My Little Community
+{{/linkTo}}
+
+// 다음과 같이 렌더링된다.
+<a class="navbar-brand" href="/">
+  My Little Community
+</a>

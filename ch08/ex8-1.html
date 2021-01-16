@@ -1,0 +1,29 @@
+<!-- 리스팅 8.1 커뮤니터 애플리케이션을 위해 첫 템플릿 -->
+
+// index.html
+<head>
+  <title>My Little Community</title>
+</head>
+
+<template name="header">
+  <nav>
+    <ul>
+      <li><a href="/">My Little Community</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</template>
+
+// home.html
+<template name="home">
+  {{> header}}
+
+  <h1>Home</h1>
+</template>
+
+// about.html
+<template name="about">
+  {{> header}}
+
+  <h1>About</h1>
+</template>
