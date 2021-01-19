@@ -1,0 +1,5 @@
+// 리스팅 9.1 npm 패키지를 packages.json을 통해 추가
+
+{
+    "gravatar": "1.1.1"
+}
