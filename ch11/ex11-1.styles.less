@@ -1,0 +1,19 @@
+// 리스팅 11.1 LESS 프리프로세서를 사용한 스타일 파일의 예
+
+@bg-color: #ff9900;
+
+.round_top_mixin {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab {
+    background: @bg-color;
+    .rounded_top_mixin;
+}
+
+@import "variables.import.less";

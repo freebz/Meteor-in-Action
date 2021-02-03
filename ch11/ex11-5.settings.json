@@ -1,0 +1,13 @@
+// 리스팅 11.5 settings.json을 통해 애플리케이션 설정값 지정
+
+{
+  "oauth": {
+    "twitter": {
+      "apikey": "123abc",
+      "secret": "abc123"
+    }
+  },
+  "public": {
+    "verson": "v1"
+  }
+}
